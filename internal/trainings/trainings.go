@@ -11,10 +11,10 @@ import (
 )
 
 type Training struct {
-	Steps        int                   // количество шагов, проделанных за тренировку.
-	TrainingType string                // тип тренировки(бег или ходьба).
-	Duration     time.Duration         // длительность тренировки.
-	Personal     personaldata.Personal // встроенная структура Personal из пакета personaldata, у которой есть метод Print().
+	Steps                 int           // количество шагов, проделанных за тренировку.
+	TrainingType          string        // тип тренировки(бег или ходьба).
+	Duration              time.Duration // длительность тренировки.
+	personaldata.Personal               // встроенная структура Personal из пакета personaldata, у которой есть метод Print().
 }
 
 func (t *Training) Parse(datastring string) (err error) {
